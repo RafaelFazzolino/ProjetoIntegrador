@@ -28,4 +28,15 @@ Além da capacidade de perceber se o serviço está funcional ou não, o softwar
 
 O software em terra será o coração do controle informatizado, sendo responsável por servir o software embarcado com um serviço \textit{restfull} para possibilitar a comunicação rápida e direta entre as duas partes.
 
-Além do serviço, a central de controle será responsável pela redundância de dados para segurança da informação e detecção de falhas.
+Além do serviço, a central de controle será responsável pela redundância de dados para segurança da informação e detecção de falhas para ter a possibilidade de correção automática.
+
+\subsection{Requisitos}
+
+Os requisitos do software são informações das quais serão levantados caso de uso para o sistema, que por sua vez nortearão o desenvolvimento das funcionalidades delimitando o que cada uma deve ou não conter.
+
+\begin{itemize}
+  \item O sistema deve ser capaz de interfaciar com diversos sensores, sendo capaz de incluir novos caso haja a necessidade.
+  \item O sistema deve realizar um \textit{backup} das informações dos vídeos a cada 2 horas.
+  \item O sistema deve ser capaz de identificar mal funcionamento nos sensores aos quais estabelece interface.
+  \item O sistema deve avisar quando forem detectados falhas ou mal funcionamento tanto na unidade terrestre quanto na unidade aérea.
+\end{itemize}
