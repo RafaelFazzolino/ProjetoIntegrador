@@ -1,27 +1,19 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{fontenc}
-\usepackage[portuguese]{babel}
-\pagenumbering{empty}
-
-\begin{document}
-
 \section{ALIMENTAÇÃO}
 \subsection{TIPOS DE ALIMENTAÇÃO}
 \indent
 \par Para a alimentação do aeróstato de monitoramento do estacionamento da Faculdade do Gama foram consideradas três possibilidades: energia solar, eólica e a cabo.  Contudo, é preciso analisar, de maneira objetiva e realista, a opção que melhor  atende às demandas de seu funcionamento, ao ambiente no qual o balão estará localizado e à viabilidade econômica de sua manutenção.
-\\\par Dessa forma, necessita-se de uma avaliação concisa das três opções disponíveis, abrangendo sua eficiência, operacionabilidade, custos e manutenção, respectivamente. 
+\\\par Dessa forma, necessita-se de uma avaliação concisa das três opções disponíveis, abrangendo sua eficiência, operacionabilidade, custos e manutenção, respectivamente.
 
 
 \section{DADOS E ANALISE}
 \subsection{ENERGIA SOLAR}
-\indent \par 
+\indent \par
 Painéis solares fotovoltáicos, são dispositivos usualmente utilizados para conversão de energia proveniente do sol, em energia elétrica. Estruturalmente, painéis solares são compostos por células solares, capazes de criar uma DDP (Diferença de Potencial) através do fluxo de corrente elétrica.
 
 
 \subsubsection{EFICIÊNCIA}
 \indent
-\par Eficiência é atingir o resultado com o mínimo de perdas de recurso, e quando falamos em uma placa fotovoltáica, falamos na quantidade de energia recebida, convertida em energia elétrica disponível para utilização. Em um painel solar, quanto maior a produção energética por metro quadrado de placa, melhor a eficiência do sistema. Atualmente, a média de valores referente à eficiência dos painéis solares comerciais fica entre 14\% e 21\%.	 
+\par Eficiência é atingir o resultado com o mínimo de perdas de recurso, e quando falamos em uma placa fotovoltáica, falamos na quantidade de energia recebida, convertida em energia elétrica disponível para utilização. Em um painel solar, quanto maior a produção energética por metro quadrado de placa, melhor a eficiência do sistema. Atualmente, a média de valores referente à eficiência dos painéis solares comerciais fica entre 14\% e 21\%.
 
 \subsubsection{OPERACIONABILIDADE}
 \indent
@@ -57,7 +49,7 @@ O modelo de aerogerador poderá apresentar eixo horizontal, com rotor em forma d
 \indent
 \par
 Mesmo se tratando de uma fonte de energia limpa, os custos de instalação de tecnologias para geração de energia elétrica são muito altos. Principalmente no Brasil, tendo em vista que o custo elevado pode se dar aos custos logísticos de implantação do projeto, como o número restrito de ofertantes nacionais também associado às restrições de importação de aerogeradores.
-\\\par 
+\\\par
 A oferta de turbinas eólicas no Brasil se restringe apenas a duas firmas que possuem suas vantagens, entre elas: imposto de 14\% sobre a importação de aerogeradores, sendo que apenas aqueles que possuem potência superior a 1,5 MW que poderão ser importados e o BNDES só concede financiamento aos fabricantes nacionais.
 \\\par
 O custo de manutenção para turbinas no inicio de sua vida útil normalmente é mais baixo quando comparado com o custo para turbinas que tenham maior tempo de funcionamento. Para máquinas novas, é estimado um custo anual de 1,5 a 2\% do investimento, enquanto para turbinas com maior tempo de funcionamento o custo do investimento sai em torno de 3\% ao ano.
@@ -73,7 +65,7 @@ Os sistemas eólicos necessitam de pouca manutenção. A vida útil de suas turb
 \par
 A localização dos balões deve ser entre 300 e 500 metros de altitude. Estes deverão ser presos ao solo pelo cabo que será responsável por  transmitir a energia elétrica  para os equipamentos e que  também terá como função servir de tubulação de gás para manter o aparelho inflado. As vantagens do cabo estão também  em sua manutenção. Este  tem a facilidade  de trazer o aeróstato para o solo, sendo mais prático tanto para manutenção como para atualização do sistema e modernização  quando necessário.
 \\\par
-Um sistema wifi para  a comunicação  o cabo se torna novamente a solução mais viável, pois, no alto,o os equipamentos poderão transmitir o sinal de internet, depois de feitos os devidos cálculos. Dependendo de sua altitude e a topografia do terreno, a comunicação poderá cobrir uma área com raio de ate 100 quilômetros. 
+Um sistema wifi para  a comunicação  o cabo se torna novamente a solução mais viável, pois, no alto,o os equipamentos poderão transmitir o sinal de internet, depois de feitos os devidos cálculos. Dependendo de sua altitude e a topografia do terreno, a comunicação poderá cobrir uma área com raio de ate 100 quilômetros.
 \subsubsection{MANUTENÇÃO}
 \indent
 \par
@@ -93,6 +85,5 @@ WEC. 2007 survey of energy resources. World Energy Council; 2007
 TEXEIRA, D. P. et al. Uma análise econômica compromissada com o futuro da energia eólica. 2012.
 
 DANTAS, G. A.; LEITE, A.L.S. Os custos da energia eólica brasileira. Grupo de estudos do setor elétrico , UFRJ.
-					
+
  KOMP, R. J. Practical photovoltaics: eletricity from solar cells, 3a. ed., aatec publications: Ann Arbor, 2001.
-\end{document}
