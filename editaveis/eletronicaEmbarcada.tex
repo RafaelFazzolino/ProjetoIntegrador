@@ -236,13 +236,18 @@ Um provável atuador para o eixo ZB, ou seja, mecanismo capaz de efetuar a estab
 
 	O setor voltado para o controle e estabilização do balão cativo exigirá uma frequência de clock muito alta, pois esta deverá ser realizada rapidamente. Portanto,  essa função será desempenhada pelo Intel Galileo Gen 2, pois este admite frequências de clock de até 400 MHz. Além disso, é compatível com os shields feitos para Arduino UNO e com o ambiente de desenvolvimento (IDE) do Arduino, o que torna sua codificação mais prática. Suas especificações principais estão detalhadas na tabela abaixo:
 
-	\begin{table}[]
+	\begin{table}[h!]
 		\centering
-		\begin{tabular}{ll}
-			Processador & SoC Quark X1000 – 32 bits                                                                    \\
-			Arquitetura & x86                                                                                          \\
-			Clock       & Até 400 MHz                                                                                  \\
-			Memória     & DDR3 de 256 MB, SRAM embarcada de 512 KB, NOR Flash de 8 MB e EEPROM padrão de 8 KB on-board
+		\begin{tabular}{l|p{0.8\textwidth}}
+			\toprule
+			Processador & SoC Quark X1000 – 32 bits \\
+			% \midrule
+			Arquitetura & x86 \\
+			% \midrule
+			Clock & Até 400 MHz \\
+			% \midrule
+			Memória & DDR3 de 256 MB, SRAM embarcada de 512 KB, NOR Flash de 8 MB e EEPROM padrão de 8 KB on-board \\
+			\bottomrule
 		\end{tabular}
 		\caption{Especificações do Intel Galileo Gen 2}
 		\label{tab:galileu}
@@ -250,13 +255,17 @@ Um provável atuador para o eixo ZB, ou seja, mecanismo capaz de efetuar a estab
 
 	Para os setores de armazenamento de imagens das câmeras e de transmissão de dados, o Raspberry PI 2 foi considerado o ideal, dado sua eficiência em termos de processamento de dados. Outra vantagem de se utilizar o Raspberry é a sua compatibilidade com a linguagem Python, o que facilitará o desenvolvimento do algoritmo responsável pela transmissão. Algumas de suas especificações estão detalhadas na tabela abaixo:
 
-	\begin{table}[]
+	\begin{table}[h!]
 		\centering
-		\begin{tabular}{ll}
-			Processador & SoC Quark X1000 – 32 bits                                                                    \\
-			Arquitetura & x86                                                                                          \\
-			Clock       & Até 400 MHz                                                                                  \\
-			Memória     & DDR3 de 256 MB, SRAM embarcada de 512 KB, NOR Flash de 8 MB e EEPROM padrão de 8 KB on-board
+		\begin{tabular}{l|l}
+			\toprule
+			Processador & Quad-core ARM Cortex A7 \\
+			CPU &	900 MHz \\
+			GPU & VideoCore IV \\
+			Memória & 1 GB de RAM \\
+			Saída de Vídeo e Áudio & HDMI e AV via 3.5mm jack \\
+			Interface Ethernet &	10/100M \\
+			\bottomrule
 		\end{tabular}
 		\caption{Especificações do Raspberry PI 2}
 		\label{tab:rasperry}
@@ -264,18 +273,20 @@ Um provável atuador para o eixo ZB, ou seja, mecanismo capaz de efetuar a estab
 
 	Para o setor voltado para a captação de dados dos sensores, decidiu-se que o ideal seria utilizar o Arduino UNO, visto que este possui grande compatibilidade com os shields escolhidos, além de uma quantidade razoável de portas disponíveis. Seus principais parâmetros estão detalhados na tabela abaixo:
 
-	\begin{table}[]
+	\begin{table}[h!]
 		\centering
-		\begin{tabular}{ll}
-			Microcontrolador             & ATmega328                       \\
-			Portas digitais              & 14                              \\
-			Portas PWM                   & 6                               \\
-			Portas analógicas            & 6                               \\
-			Memória                      & 32K (0,5 usado pelo bootloader) \\
-			Clock                        & 16MHz                           \\
-			Tensão de Operação           & 5V                              \\
-			Corrente máxima (portas I/O) & 40mA                            \\
-			Alimentação                  & 7 - 12Vdc
+		\begin{tabular}{l|l}
+			\toprule
+			Microcontrolador & ATmega328 \\
+			Portas digitais & 14 \\
+			Portas PWM & 6 \\
+			Portas analógicas & 6 \\
+			Memória & 32K (0,5 usado pelo bootloader) \\
+			Clock & 16MHz \\
+			Tensão de Operação & 5V \\
+			Corrente máxima (portas I/O) & 40mA \\
+			Alimentação & 7 - 12Vdc \\
+			\bottomrule
 		\end{tabular}
 		\caption{Especificações do Arduino UNO.}
 		\label{tab:arduino}
