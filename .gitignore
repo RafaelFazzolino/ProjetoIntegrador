@@ -10,3 +10,7 @@ _minted*
 *.idx
 *.lof
 *.lot
+*.bbl
+*.blg
+*.brf
+*.dvi
