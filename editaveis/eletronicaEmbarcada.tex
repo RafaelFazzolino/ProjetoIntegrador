@@ -61,7 +61,7 @@ O sistema eletrônico desenvolvido parte do princípio de que vários sensores p
 
 \subsubsection{Controle e Automação}
 
-Embora que a princípio o balão trabalhará com altitude fixa, este tem o grais de liberdade para mudar de orientação em torno dos eixos Z\textit{b}, Y\textit{b} e X\textit{b} (considera-se o sistema de referência Body Axes). O sistema de referência nos eixos do corpo tem origem geralmente no centro de massa, e utilizada para referenciar aeronaves, neste caso será aplicado à payload do balão. Estas mudanças de orientação ocasionarão rotações involuntárias de câmeras embarcadas no balão, dessa forma faz-se necessária a estabilização do movimento. O Sistema de Referência pode ser observado na figura \ref{img:sistReferencia}.
+Embora que a princípio o balão trabalhará com altitude fixa, este tem o grais de liberdade para mudar de orientação em torno dos eixos Z\textit{b}, Y\textit{b} e X\textit{b} (considera-se o sistema de referência Body Axes). O sistema de referência nos eixos do corpo tem origem geralmente no centro de massa, e utilizada para referenciar aeronaves, neste caso será aplicado à payload do balão. Estas mudanças de orientação ocasionarão rotações involuntárias de câmeras embarcadas no balão, dessa forma faz-se necessária a estabilização do movimento.~\cite{etkin2012dynamics}
 
 	\begin{figure}[H]
 		\centering
@@ -86,7 +86,7 @@ Um provável atuador para o eixo ZB, ou seja, mecanismo capaz de efetuar a estab
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth]{figuras/especificacao}
-		\caption{Especificação de Reaction Wheels Clyde Space}
+		\caption{Especificação de Reaction Wheels Clyde Space~\cite{clyde}}
 		\label{img:especificacao}
 	\end{figure}
 
@@ -94,7 +94,7 @@ Um provável atuador para o eixo ZB, ou seja, mecanismo capaz de efetuar a estab
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{figuras/trilho}
+		\includegraphics[width=0.4\textwidth]{figuras/trilho}
 		\caption{Representação conceitual da payload, trilho em destaque.}
 		\label{img:trilho}
 	\end{figure}
@@ -230,3 +230,53 @@ Um provável atuador para o eixo ZB, ou seja, mecanismo capaz de efetuar a estab
 			Em nosso projeto, é preciso ter precisões nas medidas necessárias e, por isso, um conversor de 16 bits é importantíssimo. Além disso, quatro entradas por módulo, 860 amostras, amplificador interno de baixas amplitudes, filtros RC em todos os canais e entradas analógicas protegidas contra ligações acidentais até $\pm$24V.
 
 			No caso do Balão Monitorado, as medições de temperatura passarã por este conversor. Como se trata de um sensor que trabalha na faixa de operação do conversor Nanoshield, ele será a melhor escolha para cumprir os requisitos do projeto.
+
+\subsubsection{Microcontroladores e Microprocessadores}
+	Os microcontroladores e microprocessadores serão responsáveis por integrar todas as atividades do sistema, seja a aquisição, armazenamento, transmissão de dados, obtidos por sensores ou câmeras, conversão de dados analógicos em digitais ou o controle do sistema. Essas atividades exigirão determinados requisitos, de acordo com a sua aplicação. Logo, vê-se a necessidade de especificar os microprocessadores e microcontroladores responsáveis por cada setor. A iniciativa de usar um microcontrolador é baseada no fato deste possuir diversos periféricos e um processador embutidos em um único circuito integrado. Esta característica minimiza o tamanho físico do projeto e facilita a implementação de várias aplicações.~\cite{prado2009}	Contudo, as CPUs dos microcontroladores são menos poderosas do que as dos microprocessadores, suas instruções, geralmente, se limitam às instruções mais simples, sua freqüência de clock é menor e seu espaço de memória endereçável costuma ser menor.~\cite{rucinski2005}
+
+	O setor voltado para o controle e estabilização do balão cativo exigirá uma frequência de clock muito alta, pois esta deverá ser realizada rapidamente. Portanto,  essa função será desempenhada pelo Intel Galileo Gen 2, pois este admite frequências de clock de até 400 MHz. Além disso, é compatível com os shields feitos para Arduino UNO e com o ambiente de desenvolvimento (IDE) do Arduino, o que torna sua codificação mais prática. Suas especificações principais estão detalhadas na tabela abaixo:
+
+	\begin{table}[]
+		\centering
+		\begin{tabular}{ll}
+			Processador & SoC Quark X1000 – 32 bits                                                                    \\
+			Arquitetura & x86                                                                                          \\
+			Clock       & Até 400 MHz                                                                                  \\
+			Memória     & DDR3 de 256 MB, SRAM embarcada de 512 KB, NOR Flash de 8 MB e EEPROM padrão de 8 KB on-board
+		\end{tabular}
+		\caption{Especificações do Intel Galileo Gen 2}
+		\label{tab:galileu}
+	\end{table}
+
+	Para os setores de armazenamento de imagens das câmeras e de transmissão de dados, o Raspberry PI 2 foi considerado o ideal, dado sua eficiência em termos de processamento de dados. Outra vantagem de se utilizar o Raspberry é a sua compatibilidade com a linguagem Python, o que facilitará o desenvolvimento do algoritmo responsável pela transmissão. Algumas de suas especificações estão detalhadas na tabela abaixo:
+
+	\begin{table}[]
+		\centering
+		\begin{tabular}{ll}
+			Processador & SoC Quark X1000 – 32 bits                                                                    \\
+			Arquitetura & x86                                                                                          \\
+			Clock       & Até 400 MHz                                                                                  \\
+			Memória     & DDR3 de 256 MB, SRAM embarcada de 512 KB, NOR Flash de 8 MB e EEPROM padrão de 8 KB on-board
+		\end{tabular}
+		\caption{Especificações do Raspberry PI 2}
+		\label{tab:rasperry}
+	\end{table}
+
+	Para o setor voltado para a captação de dados dos sensores, decidiu-se que o ideal seria utilizar o Arduino UNO, visto que este possui grande compatibilidade com os shields escolhidos, além de uma quantidade razoável de portas disponíveis. Seus principais parâmetros estão detalhados na tabela abaixo:
+
+	\begin{table}[]
+		\centering
+		\begin{tabular}{ll}
+			Microcontrolador             & ATmega328                       \\
+			Portas digitais              & 14                              \\
+			Portas PWM                   & 6                               \\
+			Portas analógicas            & 6                               \\
+			Memória                      & 32K (0,5 usado pelo bootloader) \\
+			Clock                        & 16MHz                           \\
+			Tensão de Operação           & 5V                              \\
+			Corrente máxima (portas I/O) & 40mA                            \\
+			Alimentação                  & 7 - 12Vdc
+		\end{tabular}
+		\caption{Especificações do Arduino UNO.}
+		\label{tab:arduino}
+	\end{table}
