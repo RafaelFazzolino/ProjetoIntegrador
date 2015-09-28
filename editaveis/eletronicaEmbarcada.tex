@@ -113,27 +113,86 @@ Um provável atuador para o eixo ZB, ou seja, mecanismo capaz de efetuar a estab
 	Mais uma automação essencial será a sua elevação e retração automática para o período de monitoração determinada.
 
 \subsubsection{Conversor Analógico/Digital}
-
-  \begin{enumerate}
-    \item Conversor Analógico/Digital
-    \begin{enumerate}
-      \item Definição
+      \paragraph{Definição}
 
       Os sinais que existem no mundo real são analógicos e, por essa razão, esses sinais devem ser transformados em digitais por meio de um conversor, para que possam ser manipulados pelo equipamento digital.
 
       Um conversor analógico/digital, também conhecido com A/D ou ADC, é um dispositivo que gera um sinal digital a partir de um analógico. Normalmente, esse sinal analógico é o valor de uma tensão ou corrente. Esses instrumentos são utilizados na interface entre dispositivos digitais e analógicos. Uma das grandes vantagens de se obter um valor digital é a capacidade de compactação de dados, podendo diminuir o tamanho do arquivo, economizando espaço na largura de banda, que é uma dos limitadores do conversor. Geralmente, é utilizando um filtro passa-baixas antes do conversor A/D, com o objetivo de evitar que amplitudes de alta frequência apareçam na entrada do conversor.
 
-      \item Funcionamento
+      \paragraph{Funcionamento}
 
-      Os microcontroladores processam dados obtidos por sensores. No entanto, na saída dos sensores é encontrado valores analógicos, logo é necessário transformá-los em valores digitais. Então, para executar essa atividade, é preciso do conversor A/D, que interfaceiam os dispositivos de medidas, e o microcontrolador \ref{fig:conversorAD}
+      Os microcontroladores processam dados obtidos por sensores. No entanto, na saída dos sensores é encontrado valores analógicos, logo é necessário transformá-los em valores digitais. Então, para executar essa atividade, é preciso do conversor A/D, que interfaceiam os dispositivos de medidas, e o microcontrolador, como mostrado na figura \ref{img:conversorAD}:
 
       \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.25\textwidth]{figuras/conversorAD}
+        \raggedleft
+        \includegraphics[width=0.87\textwidth]{figuras/conversorAD}
         \caption{Conversão A/D}
-        \label{fig:conversorAD}
+        \label{img:conversorAD}
       \end{figure}
 
-      \item Nanoshield ADC
-    \end{enumerate}
-  \end{enumerate}
+			Nesses conversores, quanto maior o número bits de saída, melhor ele será. Por exemplo, um conversor que tem uma saída de quatro bits possui dezesseis degraus de indicação, ou seja, pode definir uma escala de dezesseis valores diferentes, conforme mostrado na figura \ref{img:escalaLEDs}.
+
+			\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.75\textwidth]{figuras/escalaLEDs}
+        \caption{Escala de LEDs}
+        \label{img:escalaLEDs}
+      \end{figure}
+
+			Se o circuito converte sinais na faixa de 0V a 1V, é preciso ter cuidado para que os sensores usados trabalhem nessa faixa. Um amplificador operacional pode ter um ganho programado para evitar esses problemas. Então, as saídas terão um número n de pinos nas quais as saídas nos níveis lógicos 0 ou 1 são obtidos conforme a tensão de entrada.
+
+			\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figuras/conexaoPC}
+        \caption{Conexão direta com o computador}
+        \label{img:conxaoPC}
+      \end{figure}
+
+      \paragraph{Nanoshield ADC}
+
+			O Nanoshield [fig. \ref{img:nanoshield}] é um conversor A/D de grande resolução. Implementado com o CI ADS1115, ele é ideal para aplicações de leitura de sensores industriais de temperatura, umidade, monitoramento de baterias, tensões de alimentação ou qualquer projeto que precisa de um conversor A/D de alta qualidade.
+
+			\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth]{figuras/nanoshield}
+        \caption{Nanoshield}
+        \label{img:nanoshield}
+      \end{figure}
+
+			Esse conversor possui quatro entradas analógicas independentes, podendo ser utilizadas para medir tensões absolutas. Essas entradas pode ser facilmente configuradas para ler tensões de 0 a 10V. E isso é feito por meio de um divisor resistivo que já é implementado de fábrica, precisando apenas ser habilitado fechando-se jumpers de solda na placa.
+
+			\begin{table}[h!]
+				\centering
+				\begin{tabular}{ccc}
+					\toprule
+						\textbf{Jumper} & \textbf{Aberto} & \textbf{Fechado}\\
+					\midrule
+						JP0 & A0: 0 a 5V & A0: a 10V\\
+						JP1 & A1: 0 a 5V & A1: a 10V\\
+						JP2 & A2: 0 a 5V & A2: a 10V\\
+						JP3 & A3: 0 a 5V & A3: a 10V\\
+					\bottomrule
+				\end{tabular}
+				\caption{Jumpers}
+				\label{tab:jumpers}
+			\end{table}
+
+			\begin{figure}[h!]
+        \raggedleft
+        \includegraphics[width=0.87\textwidth]{figuras/jumpers}
+        \caption{Jumpers de habilitação para leitura de sensores de 0 a 10V}
+        \label{img:jumpers}
+      \end{figure}
+
+			O conversor pode se comunicar com um processador através de um barramento $I^2$C que utiliza dois pinos. Na figura 6, é apresentado um diagrama de bloco  mostrando, de maneira mais detalhada, o funcionamento do módulo.
+
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[width=0.5\textwidth]{figuras/diagramaNanoshield}
+				\caption{Diagrama de blocos do Nanoshield ADC}
+				\label{img:diagramaNanoshield}
+			\end{figure}
+
+			Em nosso projeto, é preciso ter precisões nas medidas necessárias e, por isso, um conversor de 16 bits é importantíssimo. Além disso, quatro entradas por módulo, 860 amostras, amplificador interno de baixas amplitudes, filtros RC em todos os canais e entradas analógicas protegidas contra ligações acidentais até $\pm$24V.
+
+			No caso do Balão Monitorado, as medições de temperatura passarã por este conversor. Como se trata de um sensor que trabalha na faixa de operação do conversor Nanoshield, ele será a melhor escolha para cumprir os requisitos do projeto.
