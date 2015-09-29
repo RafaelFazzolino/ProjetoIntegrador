@@ -1,0 +1,89 @@
+\section{ALIMENTAÇÃO}
+\subsection{TIPOS DE ALIMENTAÇÃO}
+\indent
+\par Para a alimentação do aeróstato de monitoramento do estacionamento da Faculdade do Gama foram consideradas três possibilidades: energia solar, eólica e a cabo.  Contudo, é preciso analisar, de maneira objetiva e realista, a opção que melhor  atende às demandas de seu funcionamento, ao ambiente no qual o balão estará localizado e à viabilidade econômica de sua manutenção.
+\\\par Dessa forma, necessita-se de uma avaliação concisa das três opções disponíveis, abrangendo sua eficiência, operacionabilidade, custos e manutenção, respectivamente.
+
+
+\section{DADOS E ANALISE}
+\subsection{ENERGIA SOLAR}
+\indent \par
+Painéis solares fotovoltáicos, são dispositivos usualmente utilizados para conversão de energia proveniente do sol, em energia elétrica. Estruturalmente, painéis solares são compostos por células solares, capazes de criar uma DDP (Diferença de Potencial) através do fluxo de corrente elétrica.
+
+
+\subsubsection{EFICIÊNCIA}
+\indent
+\par Eficiência é atingir o resultado com o mínimo de perdas de recurso, e quando falamos em uma placa fotovoltáica, falamos na quantidade de energia recebida, convertida em energia elétrica disponível para utilização. Em um painel solar, quanto maior a produção energética por metro quadrado de placa, melhor a eficiência do sistema. Atualmente, a média de valores referente à eficiência dos painéis solares comerciais fica entre 14\% e 21\%.
+
+\subsubsection{OPERACIONABILIDADE}
+\indent
+\par O modelo de aerogerador poderá apresentar eixo horizontal, com rotor em forma de balão de hélio, com transmissão de força para baixo pelo auxílio de cabos, bem como é apresentado no projeto da empresa Magenn Air Rotor System (MARS) (TEXEIRA et. al., 2012).
+\\\par Podendo as turbinas sofrerem intermitência, Edmonds et al. propõe uma capacidade distribuída sobre uma ampla área, aliviando as flutuações. As turbinas não podem operar quando a velocidade do vento é muito alta (maior que 25 m/s ou 90 km/km), pelo fato de que danos na turbina podem ocorrer e estas não poderão funcionar quando a velocidade do vento estiver muito baixa (menor que 3 m/s ou 10,8 km/h) (WEC, 2007).
+\subsubsection{CUSTOS}
+\indent
+\par
+Os custos iniciais de implantação de um sistema solar no Brasil, ainda é muito caro, devido a maior parte dos componentes serem importados e taxados com impostos e a opção começa a se tornar pouco atraente quando levamos em conta sua eficiência e comparamos com outros sistemas de geração.
+\subsubsection{MANUTENÇÃO}
+\indent
+\par
+A manutenção dos painéis solares é simples, de baixo custo, e o processo não precisa de mão de obra extremamente especializada. De forma simplificada, a manutenção do painel consiste na limpeza das superfícies, uma verificação do cabeamento, e correções no apontamento de tempos em tempos.
+
+\subsection{ENERGIA EÓLICA}
+\indent
+\par
+Devido a sua característica inesgotável e não poluidora, sendo, portanto, uma fonte de energia renovável, a energia eólica vem tomando espaço no estudo sobre aerogeradores (ROCHA et.al., 2011 apud A. EVANS et. al., 2009). Segundo A. Evans et. al. (2009), é um sistema que com menor emissão de CO2, com apenas 25 g/kW h CO2-e.
+
+\subsubsection{EFICIÊNCIA}
+\indent
+\par
+Segundo A. Evans et. al. (2009), a eficiência energética da energia eólica está entre 24-54\%.
+
+\subsubsection{OPERACIONABILIDADE}
+\indent
+\par
+O modelo de aerogerador poderá apresentar eixo horizontal, com rotor em forma de balão de hélio, com transmissão de força para baixo pelo auxílio de cabos, bem como é apresentado no projeto da empresa Magenn Air Rotor System (MARS) (TEXEIRA et. al., 2012).
+\\\par Podendo as turbinas sofrerem intermitência, Edmonds et al. propõe uma capacidade distribuída sobre uma ampla área, aliviando as flutuações. As turbinas não podem operar quando a velocidade do vento é muito alta (maior que 25 m/s ou 90 km/h), pelo fato de que danos na turbina podem ocorrer e estas não poderão funcionar quando a velocidade do vento estiver muito baixa (menor que 3 m/s ou 10,8 km/h) (WEC, 2007).
+
+
+\subsubsection{CUSTOS}
+\indent
+\par
+Mesmo se tratando de uma fonte de energia limpa, os custos de instalação de tecnologias para geração de energia elétrica são muito altos. Principalmente no Brasil, tendo em vista que o custo elevado pode se dar aos custos logísticos de implantação do projeto, como o número restrito de ofertantes nacionais também associado às restrições de importação de aerogeradores.
+\\\par
+A oferta de turbinas eólicas no Brasil se restringe apenas a duas firmas que possuem suas vantagens, entre elas: imposto de 14\% sobre a importação de aerogeradores, sendo que apenas aqueles que possuem potência superior a 1,5 MW que poderão ser importados e o BNDES só concede financiamento aos fabricantes nacionais.
+\\\par
+O custo de manutenção para turbinas no inicio de sua vida útil normalmente é mais baixo quando comparado com o custo para turbinas que tenham maior tempo de funcionamento. Para máquinas novas, é estimado um custo anual de 1,5 a 2\% do investimento, enquanto para turbinas com maior tempo de funcionamento o custo do investimento sai em torno de 3\% ao ano.
+
+\subsubsection{MANUTENÇÃO}
+\indent
+\par
+Os sistemas eólicos necessitam de pouca manutenção. A vida útil de suas turbinas eólicas é de 15 anos, e os dispositivos eletrônicos, como inversor e controlador de carga, são avaliados em 10 anos. Já os sistemas eólicos isolados com o armazenamento de energia em baterias, as quais são consideradas o ponto crítico do sistema, que quando bem projetado poderá ter uma vida útil de 4 a 5 anos.
+
+\subsection{ENERGIA A CABO}
+\subsubsection{OPERACIONABILIDADE}
+\indent
+\par
+A localização dos balões deve ser entre 300 e 500 metros de altitude. Estes deverão ser presos ao solo pelo cabo que será responsável por  transmitir a energia elétrica  para os equipamentos e que  também terá como função servir de tubulação de gás para manter o aparelho inflado. As vantagens do cabo estão também  em sua manutenção. Este  tem a facilidade  de trazer o aeróstato para o solo, sendo mais prático tanto para manutenção como para atualização do sistema e modernização  quando necessário.
+\\\par
+Um sistema wifi para  a comunicação  o cabo se torna novamente a solução mais viável, pois, no alto,o os equipamentos poderão transmitir o sinal de internet, depois de feitos os devidos cálculos. Dependendo de sua altitude e a topografia do terreno, a comunicação poderá cobrir uma área com raio de ate 100 quilômetros.
+\subsubsection{MANUTENÇÃO}
+\indent
+\par
+O cabo  de ancoragem  possui várias funções, não sendo apenas  a de manter o balão preso ao solo, mas também de transmitir dados para os sistemas de controle e para os aparelhos de bordo, além de ter a função de tubulação de gás e fio de alimentação de energia eletrica.   o guincho é uma peça extremamente importante “Essa é uma peça crítica”, afirma Nogueira. “Ela é responsável por suportar todos os esforços a que o aeróstato está sujeito, além de possibilitar a condução de eletricidade e dados.”
+
+\section{REFERÊNCIAS}
+ROCHA, P.A.C. et al . Montagem e testes de uma bancada para medição de desempenhode aerogeradores em escala. Rev. Bras. Ensino Fís.,  São Paulo ,  v. 33, n. 2, p. 1-5, June  2011 .   Available from:\\ 		http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1806-11172011000200010&lng=en&nrm=iso>. access on: 22  Sept.  2015.  \\http://dx.doi.org/10.1590/S1806-11172011000200010.
+
+A. Evans, V. Strezov and J.T. Evans, Renewable and Sustainable Energy Reviews 13, 1082 (2009)
+
+Edmonds J, Wise M, Dooley J, Kim S, Smith S, Runci P, et al. Global energy
+technology strategy—addressing climate change. Battelle Memorial Institute;
+2007.
+
+WEC. 2007 survey of energy resources. World Energy Council; 2007
+
+TEXEIRA, D. P. et al. Uma análise econômica compromissada com o futuro da energia eólica. 2012.
+
+DANTAS, G. A.; LEITE, A.L.S. Os custos da energia eólica brasileira. Grupo de estudos do setor elétrico , UFRJ.
+
+ KOMP, R. J. Practical photovoltaics: eletricity from solar cells, 3a. ed., aatec publications: Ann Arbor, 2001.

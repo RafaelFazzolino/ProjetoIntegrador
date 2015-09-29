@@ -1,4 +1,4 @@
-Tendo em vista que o balão necessitará armazenar informações das filmagens, apresentar as informações, tanto em tempo real, quanto a demanda, será necessário um desenvolvimento de um software próprio para que suporte algumas características do projeto.
+Tendo em vista que o balão necessitará armazenar informações das filmagens, apresentar as informações, tanto em tempo real, quanto sob demanda, será necessário um desenvolvimento de um software próprio para que suporte algumas características do projeto.
 
 \subsection{Visão geral do produto}
 
@@ -40,3 +40,50 @@ Os requisitos do software são informações das quais serão levantados caso de
   \item O sistema deve ser capaz de identificar mal funcionamento nos sensores aos quais estabelece interface.
   \item O sistema deve avisar quando forem detectados falhas ou mal funcionamento tanto na unidade terrestre quanto na unidade aérea.
 \end{itemize}
+
+Os requisitos do Software presente na Central de Controle foram obtidos a partir de uma técnica de obtenção de requisitos de forma Tradicional, especificando o Problema a ser solucionado, as Necessidades encontradas, suas características e os Casos de Uso do Sistema.
+
+\subsubsection{O Problema}
+
+	O problema a ser solucionado se refere a questão de segurança no Estacionamento do Campus Gama da Universidade de Brasília. Muitos quesitos levam a ocorrência deste problema, como o baixo volume de circulação de pessoas, a ausência de câmeras, a localização isolada e até a falta de segurança nos próprios carros dos frequentadores da Universidade.
+
+	Para melhor entendimento do problema em questão, utilizou-se da técnica de \textit{Framework de ishikawa}, também conhecido como \textit{Fishbone}. A figura \ref{img:fishbone} apresenta o Problema a ser solucionado.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\textwidth]{figuras/fishbone}
+		\caption{Diagrama de \textit{Ishikawa} }
+		\label{img:fishbone}
+	\end{figure}
+
+	Outra técnica bastante utilizada pelo mercado da Engenharia de Software para o entendimento do Problema, é a utilização do Framework de Problema, o qual está presente a seguir.
+
+	\begin{table}[H]
+		\centering
+		\label{my-label}
+		\begin{tabular}{lllll}
+			\cline{1-2}
+			\multicolumn{1}{|l|}{\textbf{O Problema de}}                      & \multicolumn{1}{l|}{Segurança no estacionamento da UnB Gama.}                                                                                                                  & \textbf{} & \textbf{} & \textbf{} \\ \cline{1-2}
+			\multicolumn{1}{|l|}{\textbf{Afeta}}                              & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Alunos, professores, servidores e pessoas que \\ utilizam deste espaço.\end{tabular}}                                           &           &           &           \\ \cline{1-2}
+			\multicolumn{1}{|l|}{\textbf{Cujo Impacto é}}                     & \multicolumn{1}{l|}{Insegurança, roubos.}                                                                                                                                      &           &           &           \\ \cline{1-2}
+			\multicolumn{1}{|l|}{\textbf{Uma solução bem sucedida incluiria}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Utilização de um dispositivo que permitisse aos \\ interessados monitorar o estacionamento do \\ campus UnB Gama.\end{tabular}} &           &           &           \\ \cline{1-2}
+
+		\end{tabular}
+		\caption{Framework do Problema}
+	\end{table}
+
+	Após o entendimento do problema, vê-se necessária a documentação das necessidades. Utilizou-se
+uma técnica chamada \textit{framework de necessidades} na qual são apresentados todos os problemas, as necessidades, a solução atual e a solução proposta. Dessa forma, pode-se obter um entendimento mais organizado dos problemas as necessidades, de acordo com o retratado na tabela abaixo.
+
+	\begin{table}[H]
+		\centering
+		\label{tab:necessidades}
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			\textbf{Necessidade}                                                                              & \textbf{Problema}                                                                 & \textbf{Solução Atual}                                                    & \textbf{Solução Proposta}                                                                                                                      \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Observar a situação \\ do estacionamento \\ em tempo real\end{tabular} & \begin{tabular}[c]{@{}l@{}}Baixo volume de \\ circulação de pessoas.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Rondas raras da\\ Polícia Militar\end{tabular} & \begin{tabular}[c]{@{}l@{}}Prover uma filmagem de \\ todo o estacionamento,\\ apresentando as imagens, \\ ao vivo, pela internet.\end{tabular} \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Identificar \\ criminosos\end{tabular}                                 & Fuga fácil                                                                        & Sem solução.                                                              & \begin{tabular}[c]{@{}l@{}}Com filmagens, a \\ identificação se torna \\ viável.\end{tabular}                                                  \\ \hline
+			\begin{tabular}[c]{@{}l@{}}Informar a Polícia \\ em casos de roubos\end{tabular}                  & Falta de policiamento                                                             & Sem solução.                                                              & \begin{tabular}[c]{@{}l@{}}Os usuários poderão, a partir \\ da visualização das imagens, \\ contactar a PM do Gama.\end{tabular}               \\ \hline
+		\end{tabular}
+		\caption{Framework de Necessidades}
+	\end{table}
