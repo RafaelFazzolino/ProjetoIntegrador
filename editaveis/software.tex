@@ -22,7 +22,7 @@ Nesta seção serão descritos o que será delegado a cada parte do software e o
 
 O software embarcado será responsável pelo recolhimento dos dados de cada sensor, compilando-os em uma pacote para que este possa ser enviado ao servidor, devendo ser capaz de identificar se o serviço ao qual irá consumir está disponível, e caso não esteja possa salvar as informações durante um curto período de tempo e enviar ao servidor quando o serviço estiver novamente funcional.
 
-Além da capacidade de perceber se o serviço está funcional ou não, o software embarcado deve ser capaz de verificar um mal funcionamento em algum sensor do balão para que as devidas providências possam ser tomadas.
+Além da capacidade de perceber se o serviço está funcional ou não, o software embarcado deve ser capaz de verificar um mal funcionamento em algum sensor do balão para que as devidas providências possam ser tomadas, além de controlar a pressão volumétrica do balão.
 
 \paragraph{Central de controle}
 
@@ -30,18 +30,13 @@ O software em terra será o coração do controle informatizado, sendo responsá
 
 Além do serviço, a central de controle será responsável pela redundância de dados para segurança da informação e detecção de falhas para ter a possibilidade de correção automática.
 
+Em relação as imagens, o sistema deve ser capaz de realizar zoom digital em todas as filmagens recebidas para facilitar o reconhecimento facial. Deve ser possível isolar áreas de observação, além de poder corrigir o foco de imagens defeituosas.
+
+Para a parte de segurança da informação, os dados no servidor devem ser totalmente criptografados para evitar fraudes e roubos de informação, além de ser necessário autenticação de usuários para poder utilizar qualquer funcionalidade.
+
+Outra parte do sistema terá de ser responsável pelo alerta de atividades suspeitas no estacionamento, gerar um áudio e ligar para o telefone do vigilante de plantão e avisá-lo do possível problema.
+
 \subsection{Requisitos}
-
-Os requisitos do software são informações das quais serão levantados caso de uso para o sistema, que por sua vez nortearão o desenvolvimento das funcionalidades delimitando o que cada uma deve ou não conter.
-
-\begin{itemize}
-  \item O sistema deve ser capaz de interfaciar com diversos sensores, sendo capaz de incluir novos caso haja a necessidade.
-  \item O sistema deve realizar um \textit{backup} das informações dos vídeos a cada 2 horas.
-  \item O sistema deve ser capaz de identificar mal funcionamento nos sensores aos quais estabelece interface.
-  \item O sistema deve avisar quando forem detectados falhas ou mal funcionamento tanto na unidade terrestre quanto na unidade aérea.
-\end{itemize}
-
-Os requisitos do Software presente na Central de Controle foram obtidos a partir de uma técnica de obtenção de requisitos de forma Tradicional, especificando o Problema a ser solucionado, as Necessidades encontradas, suas características e os Casos de Uso do Sistema.
 
 \subsubsection{O Problema}
 
