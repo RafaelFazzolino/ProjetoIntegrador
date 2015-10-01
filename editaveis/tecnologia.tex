@@ -44,7 +44,10 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
     
     O sistema que tratará as imagens realizará reconhecimento facial para associar o rosto do motorista ao carro em que ele chegou, e quando o sistema identificar uma situação em que uma pessoa não associada a determinado carro está muito próxima ao carro por mais de quatro segundos, ele gerará um alerta. Para que não ocorra um elevado numero de falsos positivos o sistema também executa um  mapeamento das pessoas próximas ao estacionamento e assim prevê o caminho que determinada pessoa pode fazer até chegar ao seu carro e caso essa pessoa permanece próxima a um carro diferente do qual está associada por mais de quatro segundos, mas dentro de um dos caminhos previstos pelo software até seu carro o alerta não será gerado. Por conta da velocidade com que ocorre a consumação do furto, é importante que, sempre que o sistema não conseguir reconhecer algum rosto porque a pessoa intencionalmente cobriu o rosto com algo, seja gerado um alarme independente da proximidade com qualquer veículo.
 
-  %\subsubsection{PARCERIA SEGURANÇA DO CAMPUS E SUM}
+  \subsubsection{PARCERIA SEGURANÇA DO CAMPUS E SUM}
+    O reconhecimento de situações de risco por si só não geraria os resultados esperados, pois o software não tem a capacidade de julgar uma ação como criminosa ou como um incidente comum. Visto isto, decidiu-se realizar uma integração entre o sistema automatizado e os seguranças da faculdade.
+    
+    Esta parceria aconteceria da seguinte maneira: o sistema realizaria todas as ações repetitivas da segurança, como vigiar os carros, identificar os responsáveis do veículo, só que de maneira automatizada. Porém, este sistema não conseguiria ter plena certeza que ao identificar uma possível ação criminosa estaria de fato ocorrendo uma. Para evitar que a polícia fosse chamada a cada possível crime, o sistema emitiria alertas através de ligações telefônicas quando julgasse uma situação de risco, através de uma mensagem gravada indicaria o local do ocorrido para que os seguranças fossem averiguar a natureza do alerta e tomarem as devidas providências, se necessário.
   
 \subsection{ESTRUTURA SUM}
 
@@ -169,28 +172,28 @@ Volume específico a 21,1ºC, 101,325kPa & 11967,4dm3/kg; 191,7ft3/lb\\
   
 \subsection{SUM E ALIMENTAÇÃO}
 
-\subsubsection{Tipos de Alimentação}
+  \subsubsection{Tipos de Alimentação}
 Para a alimentação do aeróstato de monitoramento do estacionamento da Faculdade do Gama foram consideradas três possibilidades: energia solar, eólica e a cabo.  Contudo, é preciso analisar, de maneira objetiva e realista, a opção que melhor  atende às demandas de seu funcionamento, ao ambiente no qual o balão estará localizado e à viabilidade econômica de sua manutenção.
 
 Dessa forma, necessita-se de uma avaliação concisa das três opções disponíveis, abrangendo sua eficiência, operacionabilidade, custos e manutenção, respectivamente.
   
-\subsubsection{Energia Solar}
+  \subsubsection{Energia Solar}
   Painéis solares fotovoltáicos, são dispositivos usualmente utilizados para conversão de energia proveniente do sol, em energia elétrica. Estruturalmente, painéis solares são compostos por células solares, capazes de criar uma DDP (Diferença de Potencial) através do fluxo de corrente elétrica.
     
-  \paragraph{Eficiência}
+    \paragraph{Eficiência}
   Eficiência é atingir o resultado com o mínimo de perdas de recurso, e quando falamos em uma placa fotovoltáica, falamos na quantidade de energia recebida, convertida em energia elétrica disponível para utilização. Em um painel solar, quanto maior a produção energética por metro quadrado de placa, melhor a eficiência do sistema. Atualmente, a média de valores referente à eficiência dos painéis solares comerciais fica entre 14\% e 21\%.
     
-  \paragraph{Operacionabilidade}
+    \paragraph{Operacionabilidade}
   Inicialmente, devemos analisar o consumo energético,em kWh, que será demandado pelo aeróstato cativo, com base nisso, é feito o dimensionamento do sistema de geração.
     
   Após a estimativa de consumo, o próximo passo é a instalação dos painéis solares, levando em conta o direcionamento, inclinação, posição geográfica e incidência solar mensal. Para isso, existem softwares os quais auxiliam no processo de apontamento, aumentando a eficiência do sistema.
     
   Finalizando todas as etapas de dimensionamento, instalação, apontamento e análise dos dados de geração, o processo pode ser considerado simples, e de baixa complexidade de opreação para pequenos sistemas.
     
-  \paragraph{Custos}
+    \paragraph{Custos}
   Os custos iniciais de implantação de um sistema solar no Brasil, ainda é muito caro, devido a maior parte dos componentes serem importados e taxados com impostos e a opção começa a se tornar pouco atraente quando levamos em conta sua eficiência e comparamos com outros sistemas de geração.
   
-  \paragraph{Manutenção}
+   \paragraph{Manutenção}
   A manutenção dos painéis solares é simples, de baixo custo, e o processo não precisa de mão de obra extremamente especializada. De forma simplificada, a manutenção do painel consiste na limpeza das superfícies, uma verificação do cabeamento, e correções no apontamento de tempos em tempos.
   
 \subsubsection{Energia Eólica}
