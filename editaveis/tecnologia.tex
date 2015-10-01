@@ -22,7 +22,29 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
 
   %\subsection{SUM E A SEGURANÇA DO CAMPUS}
   %\subsubsection{ÁREAS DE MONITORAMENTO}
-  %\subsubsection{RECONHECIMENTO DE SITUAÇÕES DE RISCO}
+\subsubsection{RECONHECIMENTO DE SITUAÇÕES DE RISCO}
+
+    Após coletar informações sobre o modo de operação dos indivíduos responsáveis pelo furto dos carros, foi observado que o mesmo ocorre em um intervalo de tempo variável, mas curto, mesmo em locais movimentados o furto não costuma demorar mais que três minutos em locais sem fluxo de pessoas um bandido experiente consegue realizar o arrombamento e  fugir utilizando o carro roubado em cerca de 30 segundos, em algumas ocasiões, os meliantes gastam mais tempo para escolher o carro que será furtado do que com a ação de verdade. Isso nos fez pensar que o sistema teria que identificar uma situação de risco de forma rápida.
+    
+    Sendo assim, paramos para observar o que já encontramos no mercado de segurança, acabamos por encontrar sistemas dos seguintes tipos:
+    
+    1- Sistemas gerenciadores de câmeras
+    2- Sistemas de segurança inteligente
+    3- Reconhecimento de pessoas
+    
+    Os sistemas gerenciadores de câmeras apenas gravam imagens obtidas através de várias câmeras e disponibilizam essas imagens em um circuito fechado de televisão (CFTV), normalmente, existe um operador de CFTV que é uma pessoa que observa todas as imagens gravadas em tempo real e toma as decisões necessárias quando as situações não desejadas se apresentam.
+    
+    O sistema de segurança inteligente utiliza diversos sensores para tentar perceber quando algo esta fora do esperado e contactar o administrador do sistema, por exemplo, alguns sistemas inteligentes(S.I.s) utilizam detectores de movimento em suas câmeras para que quando for detectado um movimento isso gere um alarme, outros sistemas utilizam sensores de abertura e assim que este sensor for ativado o alerta seja gerado e enviado, o envio pode se dar de diversas formas, seja o envio de e-mail, ligação, mensagem SMS ou ainda uma notificação de um aplicativo para smartphone.
+    
+    Sistemas inteligentes tem muito a oferecer, visto que, quebrada a barreira de ensinar a máquina a forma de reconhecer alguma situação e como lidar com ela, a possibilidade da máquina falhar em reconhecer e alertar sobre a situação é menor do que a de um ser humano falhar, visto que este esta exposto a uma lista de variáveis que o inclinam em direção ao erro muito maior do que a máquina.
+    
+    O reconhecimento de pessoas age por reconhecimento de padrões, seja ele o da voz ou um padrão biométrico, ambos podem ser utilizados em prol da segurança. Pensando em um ambiente externo, onde apenas em raras situações o aúdio coletado seria bom e confiável o suficiente para se realizar o reconhecimento, nos resta a opção de padrões biométricos, o que é uma boa opção, afinal, já existem APIs livres para uso e eficientes que prestam esse tipo de serviço, sejam exemplos, a FACE API disponibilizada para desenvolvedores, pela Google inc., em 2015 que consegue identificar pessoas mesmo que estas estejam com o rosto com inclinações diferentes da usual enquanto usa um smartphone, também é capaz de reconhecer as pessoas enquanto estas sorriem ou fecham seus olhos, pois a API calcula a posição onde os componentes do rosto da pessoa estariam e dessa forma consegue realizar a comparação. Outro exemplo foi disponibilizado logo no início de 2015 pelo laboratório de inteligência artificial do Facebook, a API liberada pelo Facebook acelera a velocidade em que a máquina aprende em até 23 vezes o normal e por isso mesmo consegue reduzir os custos consideravelmente.
+    
+    De posse destas informações, o grupo entendeu que a melhor solução está em utilizar estas tecnologias para criar uma solução própria, pois nenhuma delas parece completa e segura quando se analisamos os pontos fortes e fracos das três conjuntamente. No entanto, a união dos três tipos de sistema, somado a criptografia, que embora não citada, está presente em qualquer sistema de segurança respeitável, podem formar uma estrutura bem robusta de segurança e bem adaptada para o objetivo do nosso projeto. E isso será mostrado a seguir.
+    
+    O sistema que tratará as imagens realizará reconhecimento facial para associar o rosto do motorista ao carro em que ele chegou, e quando o sistema identificar uma situação em que uma pessoa não associada a determinado carro está muito próxima ao carro por mais de quatro segundos, ele gerará um alerta. Para que não ocorra um elevado numero de falsos positivos o sistema também executa um  mapeamento das pessoas próximas ao estacionamento e assim prevê o caminho que determinada pessoa pode fazer até chegar ao seu carro e caso essa pessoa permanece próxima a um carro diferente do qual está associada por mais de quatro segundos, mas dentro de um dos caminhos previstos pelo software até seu carro o alerta não será gerado. Por conta da velocidade com que ocorre a consumação do furto, é importante que, sempre que o sistema não conseguir reconhecer algum rosto porque a pessoa intencionalmente cobriu o rosto com algo, seja gerado um alarme independente da proximidade com qualquer veículo.
+
+
   %\subsubsection{PARCERIA SEGURANÇA DO CAMPUS E SUM}
   
 \subsection{ESTRUTURA SUM}
