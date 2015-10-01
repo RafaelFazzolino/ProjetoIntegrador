@@ -102,44 +102,35 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
   
 \subsection{ESTRUTURA SUM}
 
-   A estrutura do balão será dividida em três partes principais: a bexiga, local onde será armazenado o gás; payload, que será o local de armazenamento dos equipamentos eletrônicos; elevador, que consite o cabo preso ao payload do balão e também o sistema eletromecânico em solo que libera o fio (elevando o balão) ou retrai o fio (desce o balão).
+    A estrutura do balão é dividida em duas partes principais: a bexiga, local onde será armazenado o gás, e a payload, local de armazenamento dos equipamentos eletrônicos. O sistema ficará a uma altura entre 30 metros e 50 metros para uma melhor visualização do movimento no estacionamento.
 
-\subsection{Payload}
+    Segundo Yajima, existem três tipos de sistemas de balões que são utilizados: balão zero pressão, balão super­pressão e uma combinação entre os dois sistemas. Existem vários modelos de balão: esférico, cilíndrico, tetraédrico e formato natural. O sistema mais adequado à aplicação proposta mostrou-se o balão zero pressão no modelo de balão esférico, pois esse é o que apresenta menos complicações nos cálculos de dimensionamento de volume, empuxo, gás e etc.
+
+    Existem duas opções de gás que podem ser utilizados no balão, Hélio ou Hidrogênio, as características e vantagens estão apresentadas no desenvolvimento deste relatório. Visando as características atuais do escopo, definiu-se que, o gás a ser utilizado no balão será o Hélio, este gás possui algumas desvantagens em relação ao gás Hidrogênio, que é mais leve, porém por ser um gás inerte o Hélio é a principal opção de uso como mostrado nas tabelas 1 e 2 do tópico referente ao gás. Ficou decidido que a massa máxima da payload será de 20 kg.
+
+    O material usado para a confecção da bexiga será a Aramida (Kevlar), pois esse material apresenta segundo Nicolas T. Boukouvalas, propriedades mecânicas interessantes, como elevada tenacidade, baixo alongamento e resistência ao calor, além de ser considerado um material leve, como dito por Juliana Bellini.
   
-    A estrutura da payload foi inspirada em um padrão de nanosatélites 9U, figura \ref{img:payload}, porém com adaptações. A estrutura de um CubeSat 1U possui as dimensões deste são de um cubo 10 x 10 x 10 cm, ou seja, o termo 1U diz respeito as dimensões do sistema. Dessa forma um 9U significa que suas dimensões são 30 x 30 x 10 cm, e colocando de outra forma, é equivalente à três nanosatélites 3U em conjunto. A parte superior será acoplada à bexiga, enquanto que a inferior, ao cabo.
+    Com esses dados em mãos foi possível calcular o raio mínimo que o balão deveria ter, o valor foi de 2 metros. Para uma margem de segurança será adotado um valor de raio do balão entre 2 metros e 2,5 metros. As forças de empuxo e peso do balão variam de acordo com o raio. O empuxo com o raio igual a 2 metros é de cerca de 403N, com o raio igual a 2,5 metros o empuxo é de 786N.
+  
+    O material utilizado na ancoragem do balão será avaliado, e dependendo da resistência à tração desse material será adotado um raio fixo para o balão. Além disso, o estudo das condições ambientais e o dimensionamento dessas variáveis são fundamentais para a estabilidade do balão.
 
-  \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figuras/payload}
-    \caption{Representação da estrutura da payload. }
-    \label{img:payload}
-  \end{figure}
-
-
-    Segundo Yajima, existem três tipos de sistemas de balões que são utilizados: balão zero pressão, balão super-pressão e uma combinação entre os dois sistemas. O sistema mais adequado à aplicação proposta mostrou-se o balão zero pressão.Existem vários modelos de balão: esférico, cilíndrico, tetraédrico e formato natural. O modelo utilizado será o modelo de balão esférico, pois esse modelo é o que apresenta menos complicações nos cálculos de dimensionamento de volume, empuxo, gás e etc.
-
-    O gás que será utilizado no balão será o Hélio, este gás possui algumas desvantagens em relação ao gás Hidrogênio[2], que é mais leve, porém por ser um gás inerte o Hélio é a principal opção  de uso[3]. Ficou decidido que a massa  máxima  da payload será de 20 kg.
-
-    O material usado para a confecção da bexiga será a Aramida (Kevlar), pois  esse material apresenta propriedades mecânicas interessantes, como elevada tenacidade, baixo alongamento e resistência ao calor[10],  além de ser considerado um material leve[8]. Com esses dados em mãos foi possível calcular o raio mínimo que o balão deveria ter, o valor foi de 2 metros. Para uma margem de segurança será adotado um valor de raio do balão entre 2 metros e 2,5 metros. As forças de empuxo e peso do balão variam de acordo com o raio. O empuxo com o raio igual a 2 metros é de cerca de 403N, com o raio igual a 2,5 metros o empuxo é de 786N, será avaliado o material utilizado na ancoragem do balão,  e dependendo da resistencia à tração desse material será adotado um raio fixo para o balão.
-
-\subsection{Funcionamento}
-    O horário de funcionamento do balão será das 6h às 21h, o sistema ficará a uma altura entre 30 metros e 50 metros para uma melhor visualização do movimento do estacionamento.
-
-    O estudo das condições ambientais e o dimensionamento dessas variáveis são fundamentais para a estabilidade do balão. A força de arrasto no balão devido a um vento de 12m/s, na pior das hióteses, seria na ordem de 3,8kN.
-
-  \subsubsection{Sistema do Balão}
-    Das opções para o sistema do Balão existem três opções: Balão Pressão Zero, Balão Super-Pressão e uma combinação dos 2 sistemas.
-    O sistema escolhido para o balão foi o sistema de pressão zero. Os fatores que nos levaram a escolha desse sistema é sua capacidade de regular sua altitude, seu modo de funcionamento que facilita a descida do balão após o horário de funcionamento e a fácil implementação, ao contrario do balão super pressão que exige que a espessura do envelope do balão seja bastante alta, em alguns casos a pressão suportada por um balão de super pressão é varios fatores de 10 maior que a pressão suportada por um balão de pressão zero.
-
-    O Balão Pressão Zero é assim denominado pelo fato da diferença de entre a pressão interna ao envelope do balão e a pressão externa ser zero na base do balão, local onde o balão é conectado a atmosfera por um duto de ventilação.
+  \paragraph{SISTEMA DO BALÃO}
+    Das opções para o sistema do Balão existem três opções: Balão Pressão Zero, Balão Super­Pressão e uma combinação dos dois sistemas.
     
-    O duto funciona de tal modo que quando a pressão interna na base do balão excede a pressão da atmosfera exterior o duto é empurrado para fora e forma uma um cilindro que permite que parte do gás seja expelida. Quando a diferença de pressão é negativa, a pressão atmosferica empurra o duto para dentro, impedindo a entrada de ar.
+    O Balão Pressão Zero é assim denominado pelo fato da diferença entre a pressão interna ao envelope do balão e a pressão externa ser zero na base do balão, local onde o balão é conectado a atmosfera por um duto de ventilação.
     
-    Após atingir sua condição de completamente inflado ele ascende até a posição em qua a força de flutuabilidade se iguala ao seu peso. Essencialmente a temperatura do gás de sustentação durante a ascensão é inferior a da atmosfera, em decorrencia do efeito da expansão adiabática. Quando a ascensão termina a temperatura do balão se iguala a da atmosfera isto compensará a redução da sustentação devido a ventilação excessiva.
+    O duto funciona de tal modo que, quando a pressão interna na base do balão excede a pressão da atmosfera exterior o duto é empurrado para fora e forma uma um cilindro que permite que parte do gás seja expelida. Quando a diferença de pressão é negativa, a pressão atmosférica empurra o duto para dentro, impedindo a entrada de ar.
     
-    Uma caracteristica importante dos Balões Pressão Zero é o assim chama, efeito do ocaso. Como o balão tem uma altitude de estabilidade apenas quando ascende, após o por do sol o balão para de absorver radiação do sol, a temperatura do gás de sustentação cai, e consequentemente, a  força de flutuabilidade o que faz o balão nãomander sua altitude.
+    Após atingir sua condição de completamente inflado ele ascende até a posição em que a força de flutuabilidade se iguala ao seu peso. Essencialmente a temperatura do gás de sustentação durante a ascensão é inferior a da atmosfera, em decorrência do efeito da expansão adiabática. Quando a ascensão termina a temperatura do balão se iguala a da atmosfera isto compensará a redução da sustentação devido à ventilação excessiva.
     
-    Já que o periodo de funcionamento do Balão se dará entre 6h da manhã e as 21h a queda de altitude da noite é interessante  para a logistica, já que após esse horário o balão é recolhido.
+    Uma característica importante dos Balões Pressão Zero é o assim chamado, efeito do ocaso. Como o balão tem uma altitude de estabilidade apenas quando ascende, após o por do sol o balão para de absorver radiação solar, a temperatura do gás de sustentação cai, e consequentemente, a força de flutuabilidade, fazendo com que o balão não mantenha sua altitude.
+    
+    Seguindo essas informações o sistema que possivelmente será utilizado para o balão é o sistema de pressão zero. Os fatores que nos levaram a essa escolha são a sua capacidade de regular sua altitude, seu modo de funcionamento que facilita a descida do balão após seu horário de funcionamento, e sua fácil implementação, ao contrario do balão super pressão que exige que a espessura do envelope do balão seja bastante alta.
+    
+    Já pensando no horário de funcionamento do balão, a queda de altitude por conta da temperatura durante o anoitecer é interessante para a logística, já que nesse horário o balão talvez seja recolhido.
+
+    \paragraph{GÁS UTILIZADO}
+    Existem duas possibilidades para a escolha do gás, o hélio ou o hidrogênio. A seguir são apresentadas duas tabelas contendo as características físicas dos gases que podem ser escolhidos para o balão.
     
 \begin{table}[h]
 \caption{Características do Hélio}
@@ -207,11 +198,65 @@ Volume específico a 21,1ºC, 101,325kPa & 11967,4dm3/kg; 191,7ft3/lb\\
     
     Para um aero-monitoramento é crítico que as câmeras sejam capazes de obter imagens em alta qualidade, portanto o sistema precisa estar o mais estável possível.
     
-    %CONTINUAR APÓS DESCOBRIR COMO COLOCAR IMAGENS!
   %\subsection{SUM E A CAPTAÇÃO DE IMAGENS}
   %\subsubsection{POSICIONAMENTO DE CÂMERAS}
-  %\subsubsection{SISTEMA DE CAPTAÇÃO DE IMAGENS  E CONDIÇÕES CLIMÁTICAS}
+  \subsubsection{SISTEMA DE CAPTAÇÃO DE IMAGENS  E CONDIÇÕES CLIMÁTICAS}
+    \paragraph{SENSORES}
+    No estudo da automação em sistemas industriais, é preciso determinar as condições do sistema. É necessário obter os valores das variáveis físicas do ambiente a ser monitorado, e este é o trabalho dos sensores.
+    
+    Os sensores são dispositivos sensíveis a alguma forma de energia do ambiente que pode ser luminosa, térmica, cinética, relacionando informações sobre uma grandeza que precisa ser medida, como por exemplo a temperatura, aceleração, posição e etc.
+    Para o projeto de balão cativo, alguns dos sensores fundamentais para uma boa apresentação do produto são os sensores de temperatura, umidade e inércia (acelerômetro ou giroscópio).
+    
+    \paragraph{SENSORES DE TEMPERATURA}
+    Para a elaboração desse projeto vai ser utilizado o sensor eletrônico LM35 como sensor de temperatura, que atua de forma prática e objetiva. O LM35 é um sensor de precisão, fabricado pela National Semiconductor, a tensão de saída será linear e relativa à temperatura em que se encontra no momento em que for alimentado por uma tensão de 4-20V e GND e drena apenas 60μ A. O valor de saída é de 10mV para cada grau Celcius, o que dá uma boa vantagem por não ser necessário uma calibração como nos sensores de temperatura em Kelvin. O encapsulamento mais comum do LM 35 é o TO-92.(INSTRUMENTS, 2015).
+    
+    Estes sensores podem ser usados também para monitorar a temperatura dos outros equipamentos eletrônicos que compõem o projeto. São sensores micrôeletrônicos, logo não vão influenciar no peso do balão.
+    
+    \paragraph{SENSORES DE INERCIA}
+    Sensores de inércia são os sensores para captar algum movimento na estrutura. Para manter um monitoramento destes requisitos vamos usar alguns sensores capazes de fazer uma leitura desses parâmetros. São unidades inerciais, capaz de informar e medir a velocidade, orientação de forças gravitacionais a partir de um acelerômetro, um giroscópio, um magnetômetro e um barômetro. São 3 eixos do giroscópio L3G4200D, 3 eixos do acelerômetro ADXL345, 3 eixos do magnetômetro HMC5883L e mais o sensor de pressão BMP085.
+    
+    O magnetômetro HMC5883L mede o campo magnético e funciona como uma bússola digital, podendo ser usado com um arduíno para indicar o norte geográfico da Terra. Pode operar em temperaturas de -30ºC à 85ºC,  é alimentado com uma tensão entre 2 a 3,6V e um corrente de 100uA. (INTERNATIONAL, 2013).
+    
+    O Giroscópio L3G4200D tem capacidade para 3 eixos, bem como 3 níveis de sensibilidade. Os dados das velocidades angulares podem ser obtidos através da comunicação I2C. Opera em temperaturas de -40ºc à 85ºC, alimentação de 2,4V a 3,6V e corrente de 6,1uA,  faixa do giroscópio de: 250/500/2000 º/s.(STMICROELETRONICS, 2010).
+    
+    O Acelerômetro de 3 eixos ADXL345 possui alta resolução com baixo consumo de entergia. Os dados também são obtidos por comunicação I2C. Opera em temperaturas de -40ºC à 85ºC, tensão de alimentação entre 2.0 e 3.6V, suporta impactos de até 10000g.(DEVICES, 2009).
+    
+    O barômetro BMP085 consiste em um sensor piezo-resistivo, um sistema de conversão A/D e uma unidade de controle com EEPROM e interface I2C. Realiza a medição da pressão atmosférica. Ele pode operar em temperaturas entre -40ºC e 85ºC, é alimentado por uma tensão de 1,8 à 3,6V e corrente de 3 à 12 uA, pressão medida em hPa. (D-ROBOTICS, 2010).
+    
+    -Especificações:
+                    	-Protocolo de comunicação I2C;
+                    	-Chip Acelerômetro: ADXL345 ;
+                    	-endereço I2C: 0x53
+                    	-Faixa do acelerômetro: 2/4/8/16g;
+                    	-Chip Giroscópio: L3G4200D;
+                    	-Endereço I2C: 0x69
+                    	-faixa do giroscópio: 250/500/2000º/s;
+                    	-Chip Mangnetômetro: HMC5883L;
+                    	-Endereço I2C: 0x1E;
+                    	-Chip Barômetro: BMP085;
+                    	-Endereço I2C: 0x77;
+                    	-Tensão de operação: 3,3 – 5V;
+                    	-Peso: 5g;
+                    	-Dimensões: 25,8 x 16,8mm;
+
+  \paragraph{SENSOR DE UMIDADE}
+    A umidade é outro fator que pode influenciar no comportamento do balão, já que o balão será movido a gás. Para o sensoriamento dessa umidade vai ser utilizado o sensor DHT11, que é um sensor que permite fazer a leitura da umidade entre 20 a 90\% e também de temperatura, e pode ser utilizado juntamente com arduinos. É alimentado com tensão de 3-5V e corrente de 200uA, possui tempo de resposta de 2 segundos, precisão de medição de umidade de mais ou menos 5.0\% UR e tem dimensões de 23 x 12 x 5 mm.
   
+  \paragraph{CONVERSÃO A/D}
+    Os sinais captados pelos sensores são analógicos e, por essa razão, devem ser transformados em digitais por meio de conversor, para que possam ser manipulados pelo equipamento digital.
+Um conversor analógico/digital, também conhecido como A/D ou ADC, é um dispositivo que gera um sinal digital a partir de um analógico. Esse sinal analógico, normalmente, é o valor de uma tensão ou corrente. Esses instrumentos são utilizados na interface entre dispositivos digitais e analógicos. Uma das grandes vantagens de se obter um valor digital é a capacidade de compactação de dados, podendo diminuir o tamanho do arquivo, economizando espaço na largura de banda, que é uma dos limitadores do conversor. Geralmente, é utilizando um filtro passa baixas antes do conversor A/D, com o objetivo de evitar que amplitudes de alta frequência apareçam na entrada do conversor ().
+
+    Nesses conversores, quanto maior o número bits de saída, melhor ele será. Por exemplo, um conversor que tem uma saída de quatro bits possui dezesseis degraus de indicação, ou seja, pode definir uma escala de dezesseis valores diferentes.Se o circuito converte sinais na faixa de 0V a 1V, é preciso ter cuidado para que os sensores usados trabalhem nessa faixa. Um amplificador operacional pode ter um ganho programado para evitar esses problemas. Então, as saídas terão um número n de pinos nas quais as saídas nos níveis lógicos 0 ou 1 são obtidos conforme a tensão de entrada.
+    
+  \paragraph{MICROCONTROLADORES E MICROPROCESSADORES}
+    Os microcontroladores e microprocessadores serão responsáveis por integrar todas as atividades do sistema, seja a aquisição, armazenamento, transmissão de dados obtidos por sensores ou câmeras, conversão de dados analógicos em digitais ou o controle do sistema. Essas atividades exigirão determinados requisitos, de acordo com a sua aplicação. Logo, vê-se a necessidade de especificar os microprocessadores e microcontroladores responsáveis por cada setor. A iniciativa de usar um microcontrolador é baseada no fato deste possuir diversos periféricos e um processador embutidos em um único circuito integrado. Esta característica minimiza o tamanho físico do projeto e facilita a implementação de várias aplicações (PRADO, 2009).  Contudo, as CPUs dos microcontroladores são menos poderosas do que as dos microprocessadores, suas instruções, geralmente, se limitam às instruções mais simples, sua freqüência de clock é menor e seu espaço de memória endereçável costuma ser menor (RUCINSKI, 2004).
+    
+    Em condições desfavoráveis, como por exemplo um fluxo de ar inesperado, a rápida estabilização do balão se mostra essencial para a captação das imagens, visando sua qualidade. O setor voltado para o controle e estabilização exigirá uma frequência de clock muito alta, pois esta deverá ser realizada rapidamente. Portanto, essa função será desempenhada pelo Intel Galileo Gen 2, pois este admite frequências de clock de até 400 MHz. Além disso, é compatível com os shields feitos para Arduino UNO e com o seu ambiente de desenvolvimento (IDE), o que torna sua codificação mais prática.
+    
+    Para os setores de armazenamento e transmissão de imagens das câmeras, o Raspberry PI 2 foi considerado o ideal, dado sua eficiência em termos de processamento de dados. Outra vantagem de se utilizar o Raspberry é a sua compatibilidade com a linguagem Python, o que facilitará o desenvolvimento do algoritmo responsável pela transmissão.
+    
+    Para o setor voltado para a captação de dados dos sensores, decidiu-se que o ideal seria utilizar o Arduino UNO, visto que este possui grande compatibilidade com os shields escolhidos, além de uma quantidade razoável de portas disponíveis.
+
   %\subsection{SUM E A ESTAÇÃO DE SOLO}
   %\subsubsection{ENVIO DE DADOS}
   %\subsubsection{RECEBIMENTO DE DADOS}
@@ -286,3 +331,8 @@ Dessa forma, necessita-se de uma avaliação concisa das três opções disponí
 
   \paragraph{Manutensão}
   A manutenção de um sistema de alimentação on grid, pode ser dividido em duas etapas, a primeira, após o quadro de distribuição, que fica de responsabilidade do proprietário do sistema, cuidar da integridade dos cabos e dimensionamento do conjunto, e a segunda, antes do quadro de distribuição, que fica de responsabilidade da concessionária fornecedora de energia elétrica da região, tendo obrigação de cuidar do fornecimento, integridade e constância da alimentação da rede.
+  
+  \subsubsection{SISTEMA DE BACK-UP}
+    Será fornecida uma solução de sistema ininterrupto de energia, que deverá suportar a carga completa do sistema por no mínimo 6 horas.
+    Como solução, foi dado primeiramente o banco de baterias, contendo número suficiente de baterias para a alimentação total do sistema de acordo com a carga energética utilizada pelo balão, esta será diretamente ligada à rede elétrica urbana. Também foi pensado em um gerador a diesel ou a gasolina.
+    Os geradores a gasolina, quando considerada a mesma potencia, são mais baratos do que aqueles movidos a diesel e normalmente custam em torno de 30\% menos. Eles também são mais silenciosos e menos poluentes se comparados com os movidos a diesel. Porém, os geradores a diesel são mais resistentes e o diesel é mais barato. Mas como o gerador será de uso esporádico, o gerador a gasolina se torna mais viável.
