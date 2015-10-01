@@ -44,7 +44,6 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
     
     O sistema que tratará as imagens realizará reconhecimento facial para associar o rosto do motorista ao carro em que ele chegou, e quando o sistema identificar uma situação em que uma pessoa não associada a determinado carro está muito próxima ao carro por mais de quatro segundos, ele gerará um alerta. Para que não ocorra um elevado numero de falsos positivos o sistema também executa um  mapeamento das pessoas próximas ao estacionamento e assim prevê o caminho que determinada pessoa pode fazer até chegar ao seu carro e caso essa pessoa permanece próxima a um carro diferente do qual está associada por mais de quatro segundos, mas dentro de um dos caminhos previstos pelo software até seu carro o alerta não será gerado. Por conta da velocidade com que ocorre a consumação do furto, é importante que, sempre que o sistema não conseguir reconhecer algum rosto porque a pessoa intencionalmente cobriu o rosto com algo, seja gerado um alarme independente da proximidade com qualquer veículo.
 
-
   %\subsubsection{PARCERIA SEGURANÇA DO CAMPUS E SUM}
   
 \subsection{ESTRUTURA SUM}
@@ -62,13 +61,11 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
     \label{img:payload}
   \end{figure}
 
-\subsection{Balão}
+
     Segundo Yajima, existem três tipos de sistemas de balões que são utilizados: balão zero pressão, balão super-pressão e uma combinação entre os dois sistemas. O sistema mais adequado à aplicação proposta mostrou-se o balão zero pressão.Existem vários modelos de balão: esférico, cilíndrico, tetraédrico e formato natural. O modelo utilizado será o modelo de balão esférico, pois esse modelo é o que apresenta menos complicações nos cálculos de dimensionamento de volume, empuxo, gás e etc.
 
-\subsection{Gás}
     O gás que será utilizado no balão será o Hélio, este gás possui algumas desvantagens em relação ao gás Hidrogênio[2], que é mais leve, porém por ser um gás inerte o Hélio é a principal opção  de uso[3]. Ficou decidido que a massa  máxima  da payload será de 20 kg.
 
- \subsection{Material}
     O material usado para a confecção da bexiga será a Aramida (Kevlar), pois  esse material apresenta propriedades mecânicas interessantes, como elevada tenacidade, baixo alongamento e resistência ao calor[10],  além de ser considerado um material leve[8]. Com esses dados em mãos foi possível calcular o raio mínimo que o balão deveria ter, o valor foi de 2 metros. Para uma margem de segurança será adotado um valor de raio do balão entre 2 metros e 2,5 metros. As forças de empuxo e peso do balão variam de acordo com o raio. O empuxo com o raio igual a 2 metros é de cerca de 403N, com o raio igual a 2,5 metros o empuxo é de 786N, será avaliado o material utilizado na ancoragem do balão,  e dependendo da resistencia à tração desse material será adotado um raio fixo para o balão.
 
 \subsection{Funcionamento}
@@ -76,6 +73,87 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
 
     O estudo das condições ambientais e o dimensionamento dessas variáveis são fundamentais para a estabilidade do balão. A força de arrasto no balão devido a um vento de 12m/s, na pior das hióteses, seria na ordem de 3,8kN.
 
+  \subsubsection{Sistema do Balão}
+    Das opções para o sistema do Balão existem três opções: Balão Pressão Zero, Balão Super-Pressão e uma combinação dos 2 sistemas.
+    O sistema escolhido para o balão foi o sistema de pressão zero. Os fatores que nos levaram a escolha desse sistema é sua capacidade de regular sua altitude, seu modo de funcionamento que facilita a descida do balão após o horário de funcionamento e a fácil implementação, ao contrario do balão super pressão que exige que a espessura do envelope do balão seja bastante alta, em alguns casos a pressão suportada por um balão de super pressão é varios fatores de 10 maior que a pressão suportada por um balão de pressão zero.
+
+    O Balão Pressão Zero é assim denominado pelo fato da diferença de entre a pressão interna ao envelope do balão e a pressão externa ser zero na base do balão, local onde o balão é conectado a atmosfera por um duto de ventilação.
+    
+    O duto funciona de tal modo que quando a pressão interna na base do balão excede a pressão da atmosfera exterior o duto é empurrado para fora e forma uma um cilindro que permite que parte do gás seja expelida. Quando a diferença de pressão é negativa, a pressão atmosferica empurra o duto para dentro, impedindo a entrada de ar.
+    
+    Após atingir sua condição de completamente inflado ele ascende até a posição em qua a força de flutuabilidade se iguala ao seu peso. Essencialmente a temperatura do gás de sustentação durante a ascensão é inferior a da atmosfera, em decorrencia do efeito da expansão adiabática. Quando a ascensão termina a temperatura do balão se iguala a da atmosfera isto compensará a redução da sustentação devido a ventilação excessiva.
+    
+    Uma caracteristica importante dos Balões Pressão Zero é o assim chama, efeito do ocaso. Como o balão tem uma altitude de estabilidade apenas quando ascende, após o por do sol o balão para de absorver radiação do sol, a temperatura do gás de sustentação cai, e consequentemente, a  força de flutuabilidade o que faz o balão nãomander sua altitude.
+    
+    Já que o periodo de funcionamento do Balão se dará entre 6h da manhã e as 21h a queda de altitude da noite é interessante  para a logistica, já que após esse horário o balão é recolhido.
+    
+\begin{table}[h]
+\caption{Título1: Características do Hélio}
+\vspace{0.5cm}
+\begin{tabular}{r|lr}
+\hline
+
+Calor latente de fusão a 1,2 K, 2555 kPa & 0,3347 J/mol; 0,08cal/mol.\\
+Calor molar específico, gás a 101,325 kPa a 25ºC a pressão constante & 20,967 J/(mol x K) \\ 
+Calor molar específico, gás a 101,325 kPa a 25ºC a volume constante  & 12,863 J/(mol x K)                                       \\
+Condutividade térmica, gás a 101,325 kPa a 26,85ºC                   & 0,017744 W/(m x K); 0,425 x 10-6 cal x cm/(s x cm2 x ºC) \\
+Densidade absoluta, gás a 101,325kPa a 0ºC.                          & 0,1785 Kg/m3                                             \\
+Densidade crítica                                                    & 0,5307 Kg/dm3                                            \\
+Densidade relativa, gás a 101,325 kPa a 0ºC,(ar = 1).                & 0,138                                                    \\
+Fator crítico de compressibilidade                                   & 0,305                                                    \\
+Fórmula                                                              & 4He                                                      \\
+Massa Molecular                                                      & 4,002602                                                 \\
+Pressão crítica                                                      & 229 kPa ; 2,29 bar; 33,2 psia;,2,261 atm.                \\
+Solubilidade em água a 101,325 kPa (pressão,parcial),a 20ºC          & 8,61 cm3 /1 Kg de água                                   \\
+Temperatura crítica                                                  & 5,20 K; -268ºC; -450,3ºF                                 \\
+Viscosidade, gás a 101,325 kPa a 26,8ºC.                             & 0,02012 mPa x s; 0,02012 cP.                             \\
+Volume crítico                                                       & 14,431 dm3/ kg                                           \\
+Volume específico a 21,1ºC 101,325 kPa                               & 0,017744 W/(m x K); 0,425 x 10-6 cal x cm/(s x cm2 x ºC)
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Tabela 2: características do Hidrogênio.}
+\vspace{0.5cm}
+\begin{tabular}{r|lr}
+\hline
+
+Calor molar específico, gás a 101,325 kPa a 
+ 26,8ºC a pressão constante &  28,851 J/(mol x K)\\
+Condutividade térmica, gás a 101,325 kPa a 
+ 26,8 ºC. & 0,181699 W/(m x K);
+ 434,3 x 10-6 cal/(s x cm x ºC) \\ 
+Densidade absoluta, gás a 101,325 kPa a 25ºC  & 0,08235 kg/m3 \\
+Densidade crítica   & 0,0310 kg/dm3 \\
+Densidade relativa, normal, gás a 101,325 kPa
+ a 25ºC (ar=1) &  0,0695\\
+Fator crítico de compressibilidade & 0,305 \\
+Fórmula   & H2 \\
+ Limites de inflamabilidade no ar & 4,0-75\% (por volume)\\
+Massa Molecular & 2,01588 \\
+Pressão crítica  & 1297 kPa; 12,97 bar; 188,1 psia;  12,80 atm \\
+Temperatura de auto-ignição & 844,3 K; 571,2ºC; 1060ºF\\
+Viscosidade gás a 101,325 kPa a 26,8ºC  & 0,008957 mPa x s; 0,008957 cP\\
+Volume específico a 21,1ºC, 101,325kPa & 11967,4dm3/kg; 191,7ft3/lb\\
+
+\hline
+\end{tabular}
+\end{table}
+
+    O gás hidrogênio a primeira vista é mais vantajoso pois é mais leve que o hélio, sua densidade relativa é de 0.0695 enquanto que a do hélio é de 0.138, e apresentam um fator crítico de compressibilidade iguais. Porém o hidrogênio possui a característica de ser inflamável, enquanto que o hélio é conhecido por ser um gás inerte. Tendo em vista a segurança dos usuários do estacionamento e dos funcionário responsáveis pela manutenção do balão, a exposição ao sol e a possíveis, porém improváveis,  descargas elétricas o hélio se mostra a opção mais vantajosa.
+    
+    \subsubsection{Forças no Balão}
+    As principais forças que atuaram no Balão serão o peso do balão e sistemas integrados, a força de sustentação provocada pelo gás e a forças externas provocadas pelo vento relativo. O peso do balão e a sustentação foram calculados a partir de uma estimativa da massa total do balão e a faixa de altitude onde ele irá atuar. As forças relativas as condições de vento foram calculadas a partir da análise das condições climáticas do Distrito Federal.
+    
+    Os dados climáticos foram colhidos a partir do Banco de Dados Meteorológicos disponibilizado pelo Instituto Nacional de Meteorologia (INMET) em seu site durante o Período de 01/01/2005 até 31/12/2014.
+    
+    \paragraph{Preliminar análise de estabilidade dinâmica do balão cativos}
+    Um dos problemas em balões cativos é definir a sua configuração de equilíbrio. Durante o vôo, o balão está sujeito a perturbações atmosféricas, principalmente devido a variação da velocidade do vento, essas perturbações podem levar instabilidade ao balão.
+    
+    Para um aero-monitoramento é crítico que as câmeras sejam capazes de obter imagens em alta qualidade, portanto o sistema precisa estar o mais estável possível.
+    
+    %CONTINUAR APÓS DESCOBRIR COMO COLOCAR IMAGENS!
   %\subsection{SUM E A CAPTAÇÃO DE IMAGENS}
   %\subsubsection{POSICIONAMENTO DE CÂMERAS}
   %\subsubsection{SISTEMA DE CAPTAÇÃO DE IMAGENS  E CONDIÇÕES CLIMÁTICAS}
