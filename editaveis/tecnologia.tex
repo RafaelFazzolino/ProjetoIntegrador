@@ -80,6 +80,25 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
     O reconhecimento de situações de risco por si só não geraria os resultados esperados, pois o software não tem a capacidade de julgar uma ação como criminosa ou como um incidente comum. Visto isto, decidiu-se realizar uma integração entre o sistema automatizado e os seguranças da faculdade.
     
     Esta parceria aconteceria da seguinte maneira: o sistema realizaria todas as ações repetitivas da segurança, como vigiar os carros, identificar os responsáveis do veículo, só que de maneira automatizada. Porém, este sistema não conseguiria ter plena certeza que ao identificar uma possível ação criminosa estaria de fato ocorrendo uma. Para evitar que a polícia fosse chamada a cada possível crime, o sistema emitiria alertas através de ligações telefônicas quando julgasse uma situação de risco, através de uma mensagem gravada indicaria o local do ocorrido para que os seguranças fossem averiguar a natureza do alerta e tomarem as devidas providências, se necessário.
+    
+    \paragraph{Alertas e Eventos}
+    O sistema possui um completo gerenciamento de alarmes e eventos, com reconhecimento de alarmes de qualquer dispositivo. Este gerenciamento de alarmes contempla as seguintes funcionalidades:
+    
+    \bullet Na ocorrência de um alarme externo, no caso em algum dos carros, o sistema tomará ações proativas para alertar os operadores, como exemplo, janelas de alerta com áudio para chamar a atenção.
+    \bullet Todas estas ações de alarme podem ser configuradas independentemente para cada câmera e todas devem ter um agendamento de operação, sendo que apenas serão chamadas se o agendamento permitir.
+    \bullet O Sistema toma ações proativas na detecção de movimento das câmeras em horários pré-definidos, ou seja, se em determinado horário que não pode haver movimento em determinada câmera o sistema reconhecer um movimento, então este poderá tomar ações de alarme.
+    \bullet  O Sistema também poderá tomar todas estas mesmas ações proativas caso a câmera ou servidor de vídeo venha a ficar fora de funcionamento e / ou ocorrer algum erro na gravação das imagens.
+    \bullet  Fornece ações de alarme manual, onde o operador poderá através de um clique em uma lista de ações, disparar as ações proativas.
+    \bullet O Sistema fornece um agendamento de reconhecimento de alarmes externos por câmera, ou seja, tem a possibilidade de reconhecer os alarmes apenas em horários específicos. Sistema de Segurança Digital Descritivo de recursos do sistema.
+    \bullet Tem a capacidade de gravar as imagens na ocorrência de um evento e também fornecer um agendamento de transmissão de imagens onde possibilita a transmissão dessas imagens apenas na ocorrência de um alarme.
+    \bullet Permite que com o acionamento do alarme de uma câmera possa-se iniciar a gravação e/ou transmissão de imagens de quaisquer outras câmeras.
+    \bullet Diversos sons de alarme para que os operadores possam diferenciar cada alarme através de um som diferente.
+    \bullet Permite o agendamento de um ou mais eventos para que eles ocorram em qualquer dia do mês e ano desejado.
+    \bullet  Permite pesquisar no banco de dados de eventos, através do tipo de evento, filtro por datas, objetos e outros, as ocorrências internas e externas ao software, relacionadas aos alarmes do sistema.
+    \bullet Permite que no sistema de análise de imagens, os objetos que estiverem alarmados por alguma regra de analítico tenham o seu contorno alterado para uma determinada cor, por exemplo vermelho.
+    \bullet Permite evento de detecção de áudio caso o nível esteja acima ou abaixo de um limite especificado por um tempo determinado.
+    \bullet Permite gerar evento de falha de comunicação se o dispositivo permanecer fora de funcionamento por mais de X segundos, com opção de continuar gerando o evento a cada X segundos enquanto o dispositivo estiver off-line.
+    \bullet Permite detecção de nível de áudio para alertas e eventos.
   
 \subsection{ESTRUTURA SUM}
 
