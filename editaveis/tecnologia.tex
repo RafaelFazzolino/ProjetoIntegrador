@@ -39,6 +39,43 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
     
     O sistema que tratará as imagens realizará reconhecimento facial para associar o rosto do motorista ao carro em que ele chegou, e quando o sistema identificar uma situação em que uma pessoa não associada a determinado carro está muito próxima ao carro por mais de quatro segundos, ele gerará um alerta. Para que não ocorra um elevado numero de falsos positivos o sistema também executa um  mapeamento das pessoas próximas ao estacionamento e assim prevê o caminho que determinada pessoa pode fazer até chegar ao seu carro e caso essa pessoa permanece próxima a um carro diferente do qual está associada por mais de quatro segundos, mas dentro de um dos caminhos previstos pelo software até seu carro o alerta não será gerado. Por conta da velocidade com que ocorre a consumação do furto, é importante que, sempre que o sistema não conseguir reconhecer algum rosto porque a pessoa intencionalmente cobriu o rosto com algo, seja gerado um alarme independente da proximidade com qualquer veículo.
 
+    \paragraph{Administração}
+    \bullet  O sistema possui ferramenta de configurações globais de câmeras, onde o administrador pode aplicar a mesma configuração para um grupo de câmeras ao mesmo tempo.
+    \bullet Possui calculadora de disco para calcular o espaço em disco necessário para gravação baseando-se em dados como Resolução, quadros por segundo, tempo desejado para armazenar e estimativa de detecção de movimento.
+    \bullet Trabalha com conceito de grupos de alerta onde na ocorrência de um determinado evento, apenas o grupo configurado para receber o alerta será notificado.
+    \bullet Possui log de eventos do sistema que registrará todas as atividades dos usuários bem como as atividades do próprio sistema.
+    \bullet Possui servidor web embutido no sistema para monitoramento ao vivo e reprodução de vídeo remoto.
+    \bullet  Possui suporte a HTTPS e SSL.
+    \bullet Fornece ferramenta de monitoramento de desempenho do servidor através de gráficos históricos com informações como: Consumo de processador, consumo de memória, tráfego de entrada em KB/s e tráfego de saída em KB/s.
+    \bullet Permite configurar diretório padrão para exportação de mídia e fotos de tela de monitoramento.
+    \bullet Busca automática de câmeras na rede através de protocolo UPnP.
+    \bullet Permite a localização automática de câmeras que utilizam protocolo ONVIF.
+    \bullet O software possibilita a exportação de registros de auditoria e os registros de pesquisas de eventos
+    \bullet O sistema pode fornecer o tempo de desconexão de cada câmera
+    \bullet Acesso aos logs de eventos pode ser feito somente pelo administrador do sistema ou por usuário por ele autorizado.
+    \bullet Possibilita a exportação de relatórios e gráficos do sistema nos formatos PDF
+    \bullet Permite pesquisas por data e hora inicial e final, no sistema de auditoria.
+    \bullet  Permite que, ao clicar duas vezes sobre um registro de auditoria, este possa ser expandido mostrando todos os seus detalhes.
+    \bullet Possui recurso de máscara de privacidade (Inibe determinadas áreas da tela para que seja ocultado algum detalhe da imagem para o operador) para câmeras fixas.
+    \bullet Possui filtros para controle da imagem (Blur, Gaussian Blur, Sharpen, Emboss, Flip, Flop, Grayscale e Invert) por câmera (Reprodução de vídeo e Monitoramento ao Vivo) com configurações pré-definidas.
+    \bullet O sistema oferece a opção de corte de imagens ( CROP ) com a finalidade de selecionar uma área da imagem que se deseja manter visível para os usuários.
+    
+    \paragraph{Monitoramento ao Vivo}
+    \bullet Suporta monitoramento ao vivo de 6 câmeras.
+    \bullet Controle de Matriz Virtual através de SDK/API para criação de macros e scripts em outras linguagens.
+    \bullet Sistema de sequenciamento de câmeras, onde o sistema troca automaticamente um grupo de câmeras em tela por outro grupo, também permite a troca manual no sequenciamento.
+    \bullet Possui mosaico automatizado de modo que o sistema deverá ajustar o formato de visualização da tela automaticamente, dependendo do número de câmeras em tela.
+    \bullet Permite que os mosaicos de monitoramento sejam atualizados dinamicamente em tempo real quando criados, atualizados ou apagados, sem a necessidade de reconexão com o servidor.
+    \bullet Permite aumentar a taxa de quadros de uma determinada câmera no monitoramento, quando selecionada (Ex: Monitoramento normal em 4FPS, se o usuário selecionar a câmera, aumentar para 30FPS, quando o usuário deselecionar a câmera, sua taxa de quadros deve retornar para 4FPS).
+    \bullet Possui detecção de movimento em tempo real no monitoramento ao vivo. Esta função faz com que o movimento seja marcado com uma cor específica na tela.
+    \bullet Permite que operações remotas possam fazer uma gravação local de emergência, gravando assim as imagens que estão sendo monitoradas.
+    \bullet No monitoramento ao vivo, é possível fazer o zoom (Digital) de diferentes partes da tela, abrindo assim uma tela para cada zoom digital realizado.
+    \bullet Possui sistema de zoom com tratamento bilinear para evitar que a imagem fique quadriculada. Suporta dois ou mais monitores de vídeo por estação para o monitoramento ao vivo.
+    \bullet Clique em uma câmera para selecioná-la e maximizá-la. Opção de remover câmera da tela. Possibilita informações das câmeras como resolução da imagem, Frames por segundo "FPS", Taxa de Transferência e Decoder.
+    \bullet Identificação automática na tela, o status de funcionamento das câmeras através de diferentes ícones da lista de objetos, ex: câmera gravando por movimento, por evento, por evento e movimento, parada, em funcionamento, etc.. Sistema de Segurança Digital Descritivo de recursos do sistema
+    \bullet Exibe informações sobre as câmeras, informando através de indicadores visuais o status do dispositivo.
+    \bullet Permite abrir as câmeras clicando diretamente no seu ícone do mapa.
+
   \subsubsection{PARCERIA SEGURANÇA DO CAMPUS E SUM}
     O reconhecimento de situações de risco por si só não geraria os resultados esperados, pois o software não tem a capacidade de julgar uma ação como criminosa ou como um incidente comum. Visto isto, decidiu-se realizar uma integração entre o sistema automatizado e os seguranças da faculdade.
     
@@ -86,9 +123,9 @@ Dessa forma, devido à impossibilidade de localizar apenas um balão que possa m
     Já que o periodo de funcionamento do Balão se dará entre 6h da manhã e as 21h a queda de altitude da noite é interessante  para a logistica, já que após esse horário o balão é recolhido.
     
 \begin{table}[h]
-\caption{Título1: Características do Hélio}
+\caption{Características do Hélio}
 \vspace{0.5cm}
-\begin{tabular}{r|lr}
+\begin{tabular}{|r||lr}
 \hline
 
 Calor latente de fusão a 1,2 K, 2555 kPa & 0,3347 J/mol; 0,08cal/mol.\\
@@ -112,9 +149,9 @@ Volume específico a 21,1ºC 101,325 kPa                               & 0,01774
 \end{table}
 
 \begin{table}[h]
-\caption{Tabela 2: características do Hidrogênio.}
+\caption{Características do Hidrogênio.}
 \vspace{0.5cm}
-\begin{tabular}{r|lr}
+\begin{tabular}{|r|lr}
 \hline
 
 Calor molar específico, gás a 101,325 kPa a 
